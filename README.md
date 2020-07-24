@@ -24,7 +24,7 @@ Centos sera bientot compatible avec le script
 ```bash
 apt update
 apt install curl 
-bash <(curl -s https://raw.githubusercontent.com/zelkoa/azuriomscript/master/install.sh?token=AQMMGE4ZR4EHRM7NP65OSVC7DK2TK)
+bash <(curl -s https://raw.githubusercontent.com/zelkoa/azuriomscript/master/install.sh)
 ```
 
 ## Créateur  :star:
