@@ -52,7 +52,7 @@ then
 		sleep 2
 		add-apt-repository -y ppa:certbot/certbot
 		apt update
-		apt install certbot
+		apt install -y certbot
 		echo "Certbot installer création du certificat"
 		service apache2 stop
 		service nginx stop 
@@ -70,7 +70,7 @@ then
 		unzip AzuriomInstaller.zip
 		rm -rf AzuriomInstaller.zip
 		
-		
+		rm -rf /etc/apache2/sites-enabled/azurium.conf
 echo "<VirtualHost *:80>" >> /etc/apache2/sites-enabled/azurium.conf
 echo "  ServerName" $domaine >> /etc/apache2/sites-enabled/azurium.conf
 echo "  RewriteEngine On" >> /etc/apache2/sites-enabled/azurium.conf
@@ -140,7 +140,8 @@ else
 		wget https://azuriom.com/storage/AzuriomInstaller.zip
 		unzip AzuriomInstaller.zip
 		rm -rf AzuriomInstaller.zip
-		
+				rm -rf /etc/apache2/sites-enabled/azurium.conf
+
 echo "<VirtualHost *:80>" >> /etc/apache2/sites-enabled/azurium.conf
 echo "  ServerName" $domaine >> /etc/apache2/sites-enabled/azurium.conf
 echo "  DocumentRoot "/var/www/azuriom"" >> /etc/apache2/sites-enabled/azurium.conf
