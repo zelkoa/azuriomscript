@@ -163,7 +163,7 @@ sleep 2
 echo "=============================="
 read -p 'Entrez le nom d utilisateur de la base de données souhaiter : ' bdduser
 echo "=============================="
-read -p 'Entrez le mot de passe de cette utilisateur souhaiter : ' bddpas
+read -p 'Entrez le mot de passe de cette utilisateur souhaiter : ' -s bddpas
 echo "=============================="
 read -p 'Entrez le nom de la base de données souhaiter : ' bddname
 echo "=============================="
