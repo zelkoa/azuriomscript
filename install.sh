@@ -28,7 +28,10 @@ apt -y install software-properties-common curl sudo
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 apt-add-repository -y universe
 apt remove -y nginx
-apt -y install php7.2 php7.2-cli php7.2-gd php7.2-mysql php7.2-pdo php7.2-mbstring php7.2-tokenizer php7.2-bcmath php7.2-xml php7.2-fpm php7.2-curl php7.2-zip mariadb-server apache2 libapache2-mod-php7.2 tar unzip git
+apt install -y apt-transport-https lsb-release ca-certificates
+wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
+apt update
 
 echo "=============================="
 
